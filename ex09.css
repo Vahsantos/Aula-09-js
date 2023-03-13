@@ -1,0 +1,81 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+form {
+    width: 300px;
+    height: 350px;
+    background-color: #c79be5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    margin-top: 50px;
+}
+
+input {
+    width: 200px;
+    line-height: 32px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    box-shadow: 2px 2px 5px 2px #b090dd;
+    margin-bottom: 20px;
+    padding: 0;
+    text-indent: 8px;
+}
+
+.totalBackground {
+    background-color: #e5bbe7;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    height: 100vh;
+}
+
+.tituloDoFormulario {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 1.4em;
+    font-weight: bold;;
+}
+
+.unicButton {
+    width: 200px;
+    height: 36px;
+    background-color: #e5bbe7;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1em;
+    margin-top: 15px;
+}
+
+.MensagemDeConfirmação,
+.mensagemDeAtualização {
+    width: 300px;
+    height: 48px;
+    background-color: #21031f;
+    padding: 5px;
+    text-align: center;
+    box-sizing: border-box;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.mensagemDeAtualização {
+    height: 28px;
+    background-color: #1b0329;
+    color: #FFF;
+    font-weight: lighter;
+
+}
+
+.mensagemDeAtualização:hover {
+    cursor: pointer;
+}
