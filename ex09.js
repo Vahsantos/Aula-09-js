@@ -70,19 +70,20 @@ let executarChecagens = (nome, sobrenome, cpf) => {
     if (checaPreenchimentoDosCampos(nome, sobrenome, cpf) == true) {
         // alert('Todos os campos foram preenchidos')
         if (validaCpf(cpf.value) == true) {
-            let MensagemDeConfirmação = document.createElement('div') 
-            MensagemDeConfirmação.setAttribute('class','MensagemDeConfirmação')
+            let MensagemDeConfirmação = document.createElement('div')
+            MensagemDeConfirmação.setAttribute('class', 'MensagemDeConfirmação')
             MensagemDeConfirmação.innerHTML = 'Parabéns!<br>Cadastro realizado com sucesso!'
+            MensagemDeConfirmação.setAttribute("style", "color:white;")
             let totalBackground = document.querySelector('.totalBackground')
             totalBackground.appendChild(MensagemDeConfirmação)
             setTimeout(() => {
                 let mensagemDeAtualização = document.createElement('div')
-                mensagemDeAtualização.setAttribute('class','mensagemDeAtualização')
+                mensagemDeAtualização.setAttribute('class', 'mensagemDeAtualização')
                 mensagemDeAtualização.innerHTML = 'Clique aqui para atualizar a página.'
                 totalBackground.appendChild(mensagemDeAtualização)
                 mensagemDeAtualização.onclick = atualizaPagina
             }, 2000);
-            
+
         } else {
             alert('[OPPs] O seu CPF válido. Insira um CPF válido para consulta.')
         }
@@ -96,4 +97,4 @@ let sobrenomeUsuario = document.querySelector('#sobrenome')
 let cpfUsuario = document.querySelector('#cpf')
 let unicoButton = document.querySelector('#unicoButton')
 
-unicoButton.addEventListenner("click",   () => executarChecagens(nomeUsuario, sobrenomeUsuario, cpfUsuario))
+unicoButton.addEventListener("click", () => executarChecagens(nomeUsuario, sobrenomeUsuario, cpfUsuario))
